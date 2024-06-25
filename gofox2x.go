@@ -1,4 +1,4 @@
-package GoFox2X
+package gofox2x
 
 func Test() string {
 	hello := "Hello World!"
