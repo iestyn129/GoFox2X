@@ -1,6 +1,8 @@
 package gofox2x
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestSFSType_String(t *testing.T) {
 	var val1 = makeSFSType("ok", true).String()
