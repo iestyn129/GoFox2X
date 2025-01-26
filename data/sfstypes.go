@@ -92,43 +92,43 @@ func (st sfsType) String() string {
 	)
 }
 
-func makeSFSType(name string, data interface{}) sfsType {
+func newSFSType(name string, data interface{}) *sfsType {
 	switch data.(type) {
 	case bool:
-		return sfsType{typeID: SFSBOOL, name: name, data: data}
+		return &sfsType{typeID: SFSBOOL, name: name, data: data}
 	case int8:
-		return sfsType{typeID: SFSBYTE, name: name, data: data}
+		return &sfsType{typeID: SFSBYTE, name: name, data: data}
 	case int16:
-		return sfsType{typeID: SFSSHORT, name: name, data: data}
+		return &sfsType{typeID: SFSSHORT, name: name, data: data}
 	case int32:
-		return sfsType{typeID: SFSINT, name: name, data: data}
+		return &sfsType{typeID: SFSINT, name: name, data: data}
 	case int64:
-		return sfsType{typeID: SFSLONG, name: name, data: data}
+		return &sfsType{typeID: SFSLONG, name: name, data: data}
 	case float32:
-		return sfsType{typeID: SFSFLOAT, name: name, data: data}
+		return &sfsType{typeID: SFSFLOAT, name: name, data: data}
 	case float64:
-		return sfsType{typeID: SFSDOUBLE, name: name, data: data}
+		return &sfsType{typeID: SFSDOUBLE, name: name, data: data}
 	case string:
-		return sfsType{typeID: SFSSTRING, name: name, data: data}
+		return &sfsType{typeID: SFSSTRING, name: name, data: data}
 	case []bool:
-		return sfsType{typeID: SFSBOOLARRAY, name: name, data: data}
+		return &sfsType{typeID: SFSBOOLARRAY, name: name, data: data}
 	case []int8:
-		return sfsType{typeID: SFSBYTEARRAY, name: name, data: data}
+		return &sfsType{typeID: SFSBYTEARRAY, name: name, data: data}
 	case []int16:
-		return sfsType{typeID: SFSSHORTARRAY, name: name, data: data}
+		return &sfsType{typeID: SFSSHORTARRAY, name: name, data: data}
 	case []int32:
-		return sfsType{typeID: SFSINTARRAY, name: name, data: data}
+		return &sfsType{typeID: SFSINTARRAY, name: name, data: data}
 	case []int64:
-		return sfsType{typeID: SFSLONGARRAY, name: name, data: data}
+		return &sfsType{typeID: SFSLONGARRAY, name: name, data: data}
 	case []float32:
-		return sfsType{typeID: SFSFLOATARRAY, name: name, data: data}
+		return &sfsType{typeID: SFSFLOATARRAY, name: name, data: data}
 	case []float64:
-		return sfsType{typeID: SFSDOUBLEARRAY, name: name, data: data}
+		return &sfsType{typeID: SFSDOUBLEARRAY, name: name, data: data}
 	case []string:
-		return sfsType{typeID: SFSSTRINGARRAY, name: name, data: data}
+		return &sfsType{typeID: SFSSTRINGARRAY, name: name, data: data}
 	case struct{}:
-		return sfsType{typeID: SFSCLASS, name: name, data: data}
+		return &sfsType{typeID: SFSCLASS, name: name, data: data}
 	default:
-		return sfsType{typeID: SFSNULL, name: name, data: nil}
+		return &sfsType{typeID: SFSNULL, name: name, data: nil}
 	}
 }
