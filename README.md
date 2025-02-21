@@ -3,6 +3,9 @@ GoFox2X is a partial port of the [SmartFoxServer2X client](https://www.smartfoxs
 
 ## Links:
 
+[GFS Types](#types)
+
+### Tutorial
 [Making an Array](#making-an-array)
 
 ### Legal
@@ -32,4 +35,32 @@ func main() {
 }
 ```
 
-This code snippet creates 2 SFSArrays `array` & `array2` and adds elements to them, then adds `array2` to `array` and prints the array.
+This code snippet creates 2 GFSArrays `array` & `array2` and adds elements to them, then adds `array2` to `array` and prints the array.
+
+Types
+-
+Here is a comprehensive table of all GFS Data Types, IDs and descriptions:
+
+| Name | TypeID | Description |
+| --- | --- | --- |
+| Null | 0 | TBA |
+| Bool | 1 | A true or false boolean |
+| Byte | 2 | 8-bit signed integer |
+| Short | 3 | 16-bit signed integer |
+| Int | 4 | 32-bit signed integer |
+| Long | 5 | 64-bit signed integer |
+| Float | 6 | Single-precision 32-bit floating point |
+| Double | 7 | Double-precision 64-bit floating point |
+| Utf-String | 8 | TBA |
+| Bool Array | 9 | TBA |
+| Byte Array | 10 | TBA |
+| Short Array | 11 | TBA |
+| Int Array | 12 | TBA |
+| Long Array | 13 | TBA |
+| Float Array | 14 | TBA |
+| Double Array | 15 | TBA |
+| Utf-String Array | 16 | TBA |
+| GFSArray | 17 | TBA |
+| GFSObject | 18 | TBA |
+| Class | 19 | TBA |
+| Text | 20 | Stores any type of Text Data |
